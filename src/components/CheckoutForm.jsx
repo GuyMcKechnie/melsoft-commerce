@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { clearCart } from "../redux/cartSlice";
 import OrderSummary from "./OrderSummary";
 
 const ShippingForm = ({ values, onChange, errors }) => (
@@ -123,6 +125,7 @@ const CheckoutForm = () => {
     });
     const [payment, setPayment] = useState({ card: "", expiry: "", cvv: "" });
     const [errors, setErrors] = useState({});
+    const dispatch = useDispatch();
 
     const handleShippingChange = (e) => {
         setShipping({ ...shipping, [e.target.name]: e.target.value });
@@ -147,7 +150,7 @@ const CheckoutForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validate()) {
-            // TODO: Handle order submission and redirect to /order-success
+            dispatch(clearCart());
             window.location.href = "/order-success";
         }
     };
