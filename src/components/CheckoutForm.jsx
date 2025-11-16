@@ -230,6 +230,8 @@ const CheckoutForm = () => {
     };
 
     const handleSubmit = (e) => {
+        console.debug("Order placed: " + e);
+
         e.preventDefault();
         const newErrors = validate();
         setErrors(newErrors);

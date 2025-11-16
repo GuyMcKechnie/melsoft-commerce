@@ -18,13 +18,19 @@ const cartSlice = createSlice({
             }
         },
         removeFromCart: (state, action) => {
-            // ...existing code...
-        },
-        clearCart: (state) => {
-            state.items = [];
+            const id = action.payload;
+            state.items = state.items.filter((item) => item.id !== id);
         },
         updateQuantity: (state, action) => {
-            // ...existing code...
+            const { id, quantity } = action.payload;
+            const item = state.items.find((i) => i.id === id);
+            if (item) {
+                item.quantity = quantity;
+            }
+        },
+
+        clearCart: (state) => {
+            state.items = [];
         },
     },
 });
