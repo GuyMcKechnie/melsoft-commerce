@@ -1,15 +1,21 @@
 @import "tailwindcss";
+@import "tailwindcss/preflight"; 
+@tailwind utilities;
 
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-        "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+//body {
+   // margin: 0;
+  //  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+   //     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+     //   "Helvetica Neue", sans-serif;
+   // -webkit-font-smoothing: antialiased;
+  //  -moz-osx-font-smoothing: grayscale; ---- if you uncomment this a a couple of errors show up, this happened when i deleted some of my Null files
+//}
 
-code {
+//code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
+//}
+
+body {
+  font-family: 'Inter', sans-serif;
 }
