@@ -1,11 +1,31 @@
 import { configureStore } from '@reduxjs/toolkit';
+import cartReducer from './cartSlice';
 
-// Import your slices here (You'll add these later)
-// import authReducer from './slices/authSlice';
+// Load cart from localStorage
+const loadCart = () => {
+  try {
+    const serialized = localStorage.getItem('cart');
+    return serialized ? JSON.parse(serialized) : undefined;
+  } catch {
+    return undefined;
+  }
+};
 
-export const store = configureStore({
+const store = configureStore({
   reducer: {
-    // auth: authReducer,
-    // Add other reducers here
+    cart: cartReducer,
+  },
+  preloadedState: {
+    cart: loadCart() || { items: [] },
   },
 });
+
+// Save cart to localStorage on state change
+store.subscribe(() => {
+  try {
+    const state = store.getState();
+    localStorage.setItem('cart', JSON.stringify(state.cart));
+  } catch { }
+});
+
+export { store };
