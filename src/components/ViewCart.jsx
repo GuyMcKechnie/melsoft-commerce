@@ -18,7 +18,8 @@ const ViewCart = () => {
     const items = cart.items || [];
 
     const bagTotal = items.reduce(
-        (total, item) => total + (item.price || 0) * (item.quantity || 0),
+        (total, item) =>
+            total + (parseFloat(item.price) || 0) * (item.quantity || 0),
         0
     );
 
@@ -120,9 +121,11 @@ const ViewCart = () => {
                                             <div className="mt-auto flex items-center justify-between pt-4">
                                                 <p className="text-[1.05rem] text-[#1a1f16]">
                                                     ${" "}
-                                                    {(item.price || 0).toFixed(
-                                                        2
-                                                    )}{" "}
+                                                    {(
+                                                        parseFloat(
+                                                            item.price
+                                                        ) || 0
+                                                    ).toFixed(2)}{" "}
                                                     x {item.quantity || 0}
                                                 </p>
 
