@@ -1,61 +1,58 @@
 import { Link } from "react-router-dom";
-import { Home, Info, Mail, ShoppingCart, LogOut } from "lucide-react";
+import {
+    Home,
+    Info,
+    Mail,
+    ShoppingCart,
+    LogOut,
+    ShoppingBag,
+} from "lucide-react";
 
 export default function Sidebar() {
     return (
         <aside className="fixed top-0 left-0 h-screen w-20 bg-white flex flex-col justify-between items-center py-2 px-4 gap-2 shadow-lg z-20 rounded-lg">
-            {/* Logo */}
             <div className="flex flex-col items-center gap-4 mt-2">
-                <div className="bg-white rounded-md p-2 flex items-center justify-center w-10 h-10 shadow">
-                    <span className="text-green-700 font-bold text-xl">G5</span>
-                </div>
+                <img
+                    src="/src/assets/logo.png"
+                    alt="Logo"
+                    className="w-full h-full object-contain"
+                />
             </div>
-            {/* Nav Links */}
             <nav className="flex flex-col items-center gap-8 mt-8 flex-1">
                 <Link
                     to="/"
-                    className="bg-gray-900 rounded-lg w-10 h-10 flex items-center justify-center group"
+                    className="rounded-lg flex items-center justify-center group"
                 >
-                    <Home
-                        className="text-white group-hover:text-green-700 transition"
-                        size={24}
+                    <img
+                        src="/src/assets/menu-icon.png"
+                        alt="Home"
+                        className="w-10 h-10"
                     />
                 </Link>
                 <Link
-                    to="/about"
-                    className="bg-gray-900 rounded-lg w-10 h-10 flex items-center justify-center group"
+                    to="/"
+                    className="rounded-lg flex items-center justify-center group"
                 >
-                    <Info
-                        className="text-white group-hover:text-green-700 transition"
-                        size={24}
-                    />
-                </Link>
-                <Link
-                    to="/contact"
-                    className="bg-gray-900 rounded-lg w-10 h-10 flex items-center justify-center group"
-                >
-                    <Mail
-                        className="text-white group-hover:text-green-700 transition"
-                        size={24}
+                    <img
+                        src="/src/assets/market-icon.png"
+                        alt="Market"
+                        className="w-10 h-10"
                     />
                 </Link>
                 <Link
                     to="/cart"
-                    className="bg-green-600 rounded-lg w-10 h-10 flex items-center justify-center group"
+                    className=" rounded-lg flex items-center justify-center group"
                 >
-                    <ShoppingCart
-                        className="text-white group-hover:text-white transition"
-                        size={24}
+                    <img
+                        src="/src/assets/shopping-bag-icon.png"
+                        alt="Cart"
+                        className="w-10 h-10 text-white group-hover:text-gray-900 transition"
                     />
                 </Link>
             </nav>
-            {/* Bottom Link (Logout) */}
             <div className="mb-4">
                 <button className="bg-red-600 rounded-lg w-10 h-10 flex items-center justify-center group">
-                    <LogOut
-                        className="text-white group-hover:text-gray-900 transition"
-                        size={24}
-                    />
+                    <img src="/src/assets/sign-out-icon.png" alt="Sign Out" />
                 </button>
             </div>
         </aside>
