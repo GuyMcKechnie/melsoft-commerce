@@ -6,6 +6,7 @@ import CheckoutForm from "./components/CheckoutForm";
 import OrderSuccess from "./components/OrderSuccess";
 import ViewCart from "./components/ViewCart";
 import Home from "./components/Home";
+import ProductView from "./components/ProductView";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
             <Layout>
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/product/:id" element={<ProductView />} />
                     <Route path="/checkout" element={<CheckoutForm />} />
                     <Route path="/order-success" element={<OrderSuccess />} />
                     <Route path="/cart" element={<ViewCart />} />

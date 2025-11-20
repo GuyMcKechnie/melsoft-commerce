@@ -2,65 +2,8 @@ import ProductItem from "./ProductItem";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { ShoppingBag } from "lucide-react";
+import { products } from "../data/products";
 
-const PRODUCTS = [
-    {
-        id: 1,
-        name: "Apple Watch",
-        description: "Series 5 SE",
-        price: "529.99",
-        image: "/src/assets/apple-watch.png",
-    },
-    {
-        id: 2,
-        name: "Sony ZX330BT",
-        description: "Light Grey",
-        price: "39.99",
-        image: "/src/assets/sony-zx330bt.png",
-    },
-    {
-        id: 3,
-        name: "Iphone 11",
-        description: "Serious Black",
-        price: "619.99",
-        image: "/src/assets/iphone-11-black.png",
-    },
-    {
-        id: 4,
-        name: "Iphone 11",
-        description: "Subway Blue",
-        price: "619.99",
-        image: "/src/assets/iphone-11-blue.png",
-    },
-    {
-        id: 5,
-        name: "Iphone 11",
-        description: "Product RED",
-        price: "619.99",
-        image: "/src/assets/iphone-11-red.png",
-    },
-    {
-        id: 6,
-        name: "Iphone 11",
-        description: "Milky White",
-        price: "619.99",
-        image: "/src/assets/iphone-11-white.png",
-    },
-    {
-        id: 7,
-        name: "Iphone 13",
-        description: "Product RED",
-        price: "619.99",
-        image: "/src/assets/iphone-13-red.png",
-    },
-    {
-        id: 8,
-        name: "Iphone 14",
-        description: "Product RED",
-        price: "619.99",
-        image: "/src/assets/iphone-14-red.png",
-    },
-];
 export default function Home() {
     const cartItems = useSelector((state) => state.cart.items);
     const navigate = useNavigate();
@@ -83,7 +26,7 @@ export default function Home() {
 
                 <div className="flex-1 overflow-y-auto pr-4 pb-4 scrollbar-hide">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center lg:justify-items-start">
-                        {PRODUCTS.map((product) => (
+                        {products.map((product) => (
                             <ProductItem key={product.id} product={product} />
                         ))}
                     </div>

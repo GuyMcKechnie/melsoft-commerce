@@ -1,0 +1,792 @@
+/* Content-Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 953px;
+height: 1024px;
+left: 122px;
+top: 0px;
+overflow-y: scroll;
+
+/* Content-Area */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 48px 24px;
+gap: 16px;
+
+width: 953px;
+height: 1024px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+/* Nav-Link */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px;
+gap: 8px;
+
+width: 88px;
+height: 40px;
+
+border-radius: 10px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Icon */
+
+width: 24px;
+height: 24px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Vector */
+
+position: absolute;
+left: 35.94%;
+right: 35.94%;
+top: 21.88%;
+bottom: 21.88%;
+
+/* Font/Dark */
+border: 2px solid #1a1f16;
+
+/* Link */
+
+width: 40px;
+height: 24px;
+
+/* Body/Normal/Regular/Normal */
+font-family: "Cabin";
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+/* Font/Dark */
+color: #1a1f16;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+/* Top-Area */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+width: 905px;
+height: 424px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+/* Image-Area */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 8px;
+gap: 16px;
+
+width: 339.66px;
+height: 334px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Image-Gallery */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 16px;
+
+width: 49.66px;
+height: 206px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Image-01 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 8px;
+gap: 8px;
+
+width: 49.66px;
+height: 58px;
+
+/* UI/White */
+background: #ffffff;
+border-radius: 13px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Product-Image */
+
+width: 33.66px;
+height: 42px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Image */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: url(.png);
+
+/* Image-02 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 8px;
+gap: 8px;
+
+width: 49.66px;
+height: 58px;
+
+/* UI/White */
+background: #ffffff;
+border-radius: 13px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+/* Product-Image */
+
+width: 33.66px;
+height: 42px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Image */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: url(.png);
+
+/* Image-03 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 8px;
+gap: 8px;
+
+width: 49.66px;
+height: 58px;
+
+/* UI/White */
+background: #ffffff;
+border-radius: 13px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+/* Product-Image */
+
+width: 33.66px;
+height: 42px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Image */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: url(.png);
+
+/* Main-Image */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 8px;
+gap: 10px;
+
+width: 258px;
+height: 318px;
+
+/* UI/White */
+background: #ffffff;
+border-radius: 13px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+/* Product-Image */
+
+width: 242px;
+height: 302px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Image */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: url(.png);
+
+/* Text-Content */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px;
+
+width: 541.34px;
+height: 424px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+/* Header */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px;
+gap: 8px;
+
+width: 354px;
+height: 136px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Apple Watch */
+
+width: 338px;
+height: 74px;
+
+/* Title/Normal/Bold/Normal */
+font-family: "Cabin";
+font-style: normal;
+font-weight: 700;
+font-size: 61.04px;
+line-height: 74px;
+
+/* Font/Dark */
+color: #1a1f16;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Series 5 SE */
+
+width: 147px;
+height: 38px;
+
+/* Subtitle/Small/Medium/Normal */
+font-family: "Cabin";
+font-style: normal;
+font-weight: 500;
+font-size: 31.25px;
+line-height: 38px;
+/* identical to box height */
+
+/* Font/Placeholder */
+color: rgba(26, 31, 22, 0.5);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+/* Special */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 16px 8px;
+gap: 8px;
+
+width: 243px;
+height: 56px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+/* Rating */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px 16px 0px 0px;
+gap: 8px;
+
+width: 168px;
+height: 24px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Star-01 */
+
+width: 24px;
+height: 24px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Vector */
+
+position: absolute;
+left: 3.13%;
+right: 3.12%;
+top: 6.25%;
+bottom: 6.24%;
+
+/* Font/Accent */
+background: #12805d;
+
+/* Star-02 */
+
+width: 24px;
+height: 24px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+/* Vector */
+
+position: absolute;
+left: 3.13%;
+right: 3.12%;
+top: 6.25%;
+bottom: 6.24%;
+
+/* Font/Accent */
+background: #12805d;
+
+/* Star-03 */
+
+width: 24px;
+height: 24px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+/* Vector */
+
+position: absolute;
+left: 3.13%;
+right: 3.12%;
+top: 6.25%;
+bottom: 6.24%;
+
+/* Font/Accent */
+background: #12805d;
+
+/* Star-04 */
+
+width: 24px;
+height: 24px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+/* Vector */
+
+position: absolute;
+left: 3.13%;
+right: 3.12%;
+top: 6.25%;
+bottom: 6.24%;
+
+/* Font/Accent */
+background: #12805d;
+
+/* Star-05 */
+
+width: 24px;
+height: 24px;
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+/* Vector */
+
+position: absolute;
+left: 6.25%;
+right: 6.25%;
+top: 9.38%;
+bottom: 9.38%;
+
+/* Font/Accent */
+border: 2px solid #12805d;
+
+/* Vector */
+
+position: absolute;
+left: 6.25%;
+right: 50%;
+top: 9.38%;
+bottom: 9.38%;
+
+/* Font/Accent */
+background: #12805d;
+
+/* 4.5 / 5 */
+
+width: 51px;
+height: 24px;
+
+/* Body/Normal/Regular/Condensed */
+font-family: "Cabin";
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+letter-spacing: -0.02em;
+
+/* Font/Accent */
+color: #12805d;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+/* $ 529.99 */
+
+width: 118px;
+height: 38px;
+
+/* Subtitle/Small/Medium/Normal */
+font-family: "Cabin";
+font-style: normal;
+font-weight: 500;
+font-size: 31.25px;
+line-height: 38px;
+/* identical to box height */
+
+/* Font/Dark */
+color: #1a1f16;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+/* Short-Description */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 8px;
+gap: 10px;
+
+width: 525.34px;
+height: 122px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pellentesque tellus imperdiet mattis. Proin in quis ipsum non amet imperdiet. Dignissim nisi leo a at. Sit nec lacus, nunc volutpat, tincidunt lorem mi duis. Vitae elementum libero. */
+
+width: 509.34px;
+height: 106px;
+
+/* Body/Normal/Regular/Normal */
+font-family: "Cabin";
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+/* Font/Dark */
+color: #1a1f16;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+/* CTA */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-end;
+padding: 8px;
+gap: 10px;
+
+width: 525.34px;
+height: 56px;
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+align-self: stretch;
+flex-grow: 0;
+
+/* Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 24px;
+gap: 8px;
+
+width: 174px;
+height: 40px;
+
+/* UI/Dark */
+background: #1a1f16;
+border-radius: 14px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Icon */
+
+width: 24px;
+height: 24px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Vector */
+
+position: absolute;
+left: 9.38%;
+right: 9.37%;
+top: 6.25%;
+bottom: 6.25%;
+
+/* UI/White */
+background: #ffffff;
+
+/* Button */
+
+width: 94px;
+height: 24px;
+
+/* Body/Normal/Medium/Normal */
+font-family: "Cabin";
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+
+/* Font/White */
+color: #ffffff;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+/* Bottom-Area */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 8px;
+gap: 16px;
+
+width: 905px;
+height: 493px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+/* Line 2 */
+
+width: 858px;
+height: 0px;
+
+/* Font/Placeholder */
+border: 3px solid rgba(26, 31, 22, 0.5);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Description */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 16px 8px;
+gap: 8px;
+
+width: 889px;
+height: 461px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+/* Description */
+
+width: 153px;
+height: 38px;
+
+/* Subtitle/Small/Medium/Normal */
+font-family: "Cabin";
+font-style: normal;
+font-weight: 500;
+font-size: 31.25px;
+line-height: 38px;
+/* identical to box height */
+
+/* Font/Dark */
+color: #1a1f16;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim odio faucibus nec malesuada purus volutpat vel sed viverra. Id sagittis, phasellus dui in arcu. Nec arcu, sit nunc, nibh purus pellentesque sagittis. Felis rhoncus facilisis massa eget purus in purus. Etiam at cras nulla nunc. Malesuada in pretium diam scelerisque sit mattis in egestas neque. Eu porta tempor sodales nisl integer turpis porttitor sed sed. Ut senectus odio dictum enim velit tempor diam quisque suspendisse. Orci vel ridiculus diam viverra. Libero malesuada orci, quis placerat suscipit augue imperdiet. Et praesent augue dictum mauris eget lacus malesuada. Aenean nisi, sodales natoque massa magna dignissim mi. Mattis tellus, justo, lorem sed tempor diam sit viverra enim. Id id placerat eu etiam nulla laoreet. Dignissim leo fames turpis quis suspendisse vulputate laoreet vulputate ac. Aliquam justo lectus eu dui porttitor. Cras a aliquam phasellus sollicitudin ornare. Tristique volutpat facilisis in ut proin. Est vitae facilisi sollicitudin id lorem mattis nibh ipsum, nec. Consectetur consectetur morbi morbi aliquet mi risus, velit, sit at. Integer morbi viverra hendrerit risus. Odio phasellus nibh senectus nec id enim quam sed. At potenti sollicitudin sollicitudin lobortis morbi. Nunc molestie et adipiscing aliquam. Sit vel mi dolor suscipit. In eget ut ac at facilisi leo viverra. Arcu ac ut fermentum, viverra et, vitae etiam cras. Eu purus non ut turpis fusce. Mi vitae nibh mi ut feugiat varius risus eros. */
+
+width: 873px;
+height: 383px;
+
+/* Body/Normal/Regular/Condensed */
+font-family: "Cabin";
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+letter-spacing: -0.02em;
+
+/* Font/Tertiary */
+color: #60695c;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
