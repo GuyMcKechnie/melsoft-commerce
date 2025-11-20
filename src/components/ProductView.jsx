@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
-import { ChevronLeft, Star, ShoppingBag } from "lucide-react";
+import { ChevronLeft, Star, StarHalf, ShoppingBag } from "lucide-react";
 import { getProductById, products } from "../data/products";
 
 const ProductView = () => {
@@ -34,19 +34,28 @@ const ProductView = () => {
         alert(`Added ${product.name} to cart!`);
     };
 
-    // Helper to render stars based on rating
+    // Helper to render stars
     const renderStars = (rating) => {
+        const validRating = rating || 4.5;
         const stars = [];
-        for (let i = 1; i <= 5; i++) {
+        const fullStars = Math.floor(validRating);
+        const hasHalfStar = validRating % 1 !== 0;
+
+        for (let i = 0; i < fullStars; i++) {
             stars.push(
                 <Star
-                    key={i}
+                    key={`full-${i}`}
                     size={24}
-                    className={
-                        i <= rating
-                            ? "fill-[#12805d] text-[#12805d]"
-                            : "fill-transparent text-[#12805d]"
-                    }
+                    className="fill-[#12805d] text-[#12805d]"
+                />
+            );
+        }
+        if (hasHalfStar) {
+            stars.push(
+                <StarHalf
+                    key="half"
+                    size={24}
+                    className="fill-transparent text-[#12805d]"
                 />
             );
         }

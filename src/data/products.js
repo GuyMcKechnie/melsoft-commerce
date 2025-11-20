@@ -1,11 +1,11 @@
-import appleWatch from "../assets/products/apple-watch.png";
-import sonyZX330BT from "../assets/products/sony-ZX330BT.png";
-import iphone11Black from "../assets/products/iphone-11-black.png";
-import iphone11Blue from "../assets/products/iphone-11-blue.png";
-import iphone11Red from "../assets/products/iphone-11-red.png";
-import iphone11White from "../assets/products/iphone-11-white.png";
-import iphone13Red from "../assets/products/iphone-13-red.png";
-import iphone14Red from "../assets/products/iphone-14-red.png";
+import appleWatch from "../assets/apple-watch.png";
+import sonyZX330BT from "../assets/sony-ZX330BT.png";
+import iphone11Black from "../assets/iphone-11-black.png";
+import iphone11Blue from "../assets/iphone-11-blue.png";
+import iphone11Red from "../assets/iphone-11-red.png";
+import iphone11White from "../assets/iphone-11-white.png";
+import iphone13Red from "../assets/iphone-13-red.png";
+import iphone14Red from "../assets/iphone-14-red.png";
 
 export const products = [
     {
