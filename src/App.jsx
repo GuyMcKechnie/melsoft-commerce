@@ -1,6 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Sidebar from "./components/Sidebar";
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Navigate,
+} from "react-router-dom";
 import Layout from "./components/Layout";
 import CheckoutForm from "./components/CheckoutForm";
 import OrderSuccess from "./components/OrderSuccess";
@@ -13,14 +17,11 @@ import AddAddress from "./components/AddAddress";
 function App() {
     return (
         <Router>
-            <Sidebar />
             <Layout>
                 <Routes>
                     <Route
                         path="/"
-                        element={
-                            <div>Please navigate to the product page.</div>
-                        }
+                        element={<Navigate to="/products" replace />}
                     />
                     <Route path="/products" element={<Home />} />
                     <Route path="/product/:id" element={<ProductView />} />

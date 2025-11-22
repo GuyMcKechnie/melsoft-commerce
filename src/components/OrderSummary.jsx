@@ -1,12 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { selectCartItems, selectCartTotalPrice } from "../redux/selectors";
 
 const OrderSummary = () => {
-    const items = useSelector((state) => state.cart.items);
-    const total = items.reduce(
-        (sum, item) => sum + item.price * item.quantity,
-        0
-    );
+    const items = useSelector(selectCartItems);
+    const total = useSelector(selectCartTotalPrice);
     const shipping = items.length > 0 ? 6.99 : 0;
     const gst = items.length > 0 ? total * 0.13 : 0;
     const orderTotal = total + shipping + gst;

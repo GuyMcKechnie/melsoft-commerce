@@ -2,18 +2,13 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Star, StarHalf, Minus, Plus, ShoppingBag, Trash2 } from "lucide-react";
 import { removeFromCart, updateQuantity } from "../redux/cartSlice"; // Adjust path as needed
+import { selectCartItems, selectCartTotalPrice } from "../redux/selectors";
 import { Link } from "react-router-dom";
 
 const ViewCart = () => {
     const dispatch = useDispatch();
-    const cart = useSelector((state) => state.cart);
-    const items = cart.items || [];
-
-    const bagTotal = items.reduce(
-        (total, item) =>
-            total + (parseFloat(item.price) || 0) * (item.quantity || 0),
-        0
-    );
+    const items = useSelector(selectCartItems) || [];
+    const bagTotal = useSelector(selectCartTotalPrice);
 
     // Helper to render stars
     const renderStars = (rating) => {

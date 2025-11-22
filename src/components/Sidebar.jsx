@@ -1,6 +1,6 @@
 import { LogOut, Menu, ShoppingBag, Store } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/logo.png"; // Ensure Vite processes the image for production
+import logo from "../assets/logo.png";
 
 export default function Sidebar() {
     const location = useLocation();
@@ -32,9 +32,7 @@ export default function Sidebar() {
                 />
             </div>
             <nav className="flex flex-col items-center gap-8 mt-8 flex-1">
-                <Link to="/" className={linkClass(isHome)}>
-                    <Menu className={iconClass(isHome)} />
-                </Link>
+                <Menu className={iconClass(isHome)} />
                 <Link to="/products" className={linkClass(isProducts)}>
                     <Store className={iconClass(isProducts)} />
                 </Link>
