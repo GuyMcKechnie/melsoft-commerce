@@ -8,6 +8,7 @@ import ViewCart from "./components/ViewCart";
 import Home from "./components/Home";
 import ProductView from "./components/ProductView";
 import AddPayment from "./components/AddPayment";
+import AddAddress from "./components/AddAddress";
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                     <Route path="/order-success" element={<OrderSuccess />} />
                     <Route path="/cart" element={<ViewCart />} />
                     <Route path="/add-payment" element={<AddPayment />} />
+                    <Route path="/add-address" element={<AddAddress />} />
                 </Routes>
             </Layout>
         </Router>

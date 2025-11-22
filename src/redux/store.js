@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
 import cartReducer from './cartSlice';
 import paymentReducer from './paymentSlice';
+import addressReducer from './addressSlice';
 
-// Generic loader
 const loadKey = (key) => {
   try {
     const serialized = localStorage.getItem(key);
@@ -16,10 +16,12 @@ const store = configureStore({
   reducer: {
     cart: cartReducer,
     payment: paymentReducer,
+    address: addressReducer,
   },
   preloadedState: {
     cart: loadKey('cart') || { items: [] },
     payment: loadKey('payment') || { methods: [], selectedMethodId: null, defaultMethodId: null },
+    address: loadKey('address') || { addresses: [], selectedAddressId: null, defaultAddressId: null },
   },
 });
 
@@ -29,6 +31,7 @@ store.subscribe(() => {
     const state = store.getState();
     localStorage.setItem('cart', JSON.stringify(state.cart));
     localStorage.setItem('payment', JSON.stringify(state.payment));
+    localStorage.setItem('address', JSON.stringify(state.address));
   } catch { }
 });
 

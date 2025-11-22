@@ -1,109 +1,49 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { clearCart } from "../redux/cartSlice";
 import OrderSummary from "./OrderSummary";
 import { Link } from "react-router-dom";
 import { CreditCard, Gift } from "lucide-react";
 
-const ShippingForm = ({ values, onChange, errors, submitted }) => (
+const ShippingForm = ({ values, errors, submitted }) => (
     <div className="flex flex-col items-start p-4 gap-2 bg-white rounded-[13px]">
-        <div className="w-full flex items-center justify-between px-2 py-2">
+        <div className="flex items-start justify-between px-2 py-2 w-full">
             <h3 className="text-[31.25px] leading-[38px] tracking-[0.25em] uppercase text-[#1A1F16]">
                 Shipping Address
             </h3>
-            <button
-                type="button"
-                className="box-border inline-flex justify-center items-center px-6 py-2 gap-2 border border-[#1A1F16] rounded-[11px] text-[16px] leading-[19px] text-[#1A1F16]"
+            <Link
+                to="/add-address"
+                className="inline-flex justify-center items-center px-6 py-2 border border-[#1A1F16] rounded-[11px] text-[16px] leading-[19px] text-[#1A1F16]"
             >
                 Change
-            </button>
+            </Link>
         </div>
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-                <label
-                    htmlFor="name"
-                    className="block mb-1 text-[20px] leading-6 text-[#1A1F16]"
-                >
-                    Full Name
-                </label>
-                <input
-                    id="name"
-                    name="name"
-                    value={values.name}
-                    onChange={onChange}
-                    className="w-full border border-[#60695C] rounded-[9px] p-2 text-[20px] leading-6 text-[#1A1F16]"
-                    required
-                />
-                {submitted && errors.name && (
-                    <span className="text-red-500 text-sm">
-                        Name is required.
-                    </span>
-                )}
-            </div>
-            <div>
-                <label
-                    htmlFor="address"
-                    className="block mb-1 text-[20px] leading-6 text-[#1A1F16]"
-                >
-                    Address
-                </label>
-                <input
-                    id="address"
-                    name="address"
-                    value={values.address}
-                    onChange={onChange}
-                    className="w-full border border-[#60695C] rounded-[9px] p-2 text-[20px] leading-6 text-[#1A1F16]"
-                    required
-                />
-                {submitted && errors.address && (
-                    <span className="text-red-500 text-sm">
-                        Address is required.
-                    </span>
-                )}
-            </div>
-            <div>
-                <label
-                    htmlFor="city"
-                    className="block mb-1 text-[20px] leading-6 text-[#1A1F16]"
-                >
-                    City
-                </label>
-                <input
-                    id="city"
-                    name="city"
-                    value={values.city}
-                    onChange={onChange}
-                    className="w-full border border-[#60695C] rounded-[9px] p-2 text-[20px] leading-6 text-[#1A1F16]"
-                    required
-                />
-                {submitted && errors.city && (
-                    <span className="text-red-500 text-sm">
-                        City is required.
-                    </span>
-                )}
-            </div>
-            <div>
-                <label
-                    htmlFor="postal"
-                    className="block mb-1 text-[20px] leading-6 text-[#1A1F16]"
-                >
-                    Postal Code
-                </label>
-                <input
-                    id="postal"
-                    name="postal"
-                    value={values.postal}
-                    onChange={onChange}
-                    className="w-full border border-[#60695C] rounded-[9px] p-2 text-[20px] leading-6 text-[#1A1F16]"
-                    required
-                />
-                {submitted && errors.postal && (
-                    <span className="text-red-500 text-sm">
-                        Postal code is required.
-                    </span>
-                )}
+
+        <div className="flex flex-row justify-between items-start w-full ">
+            <div className="flex flex-col items-start p-2 gap-2">
+                <p className="font-cabin font-normal text-[20px] leading-6 text-[#1A1F16]">
+                    {values.name || "No name provided"}
+                </p>
+                <p className="font-cabin font-normal text-[20px] leading-6 text-[#1A1F16]">
+                    {values.address || "No address provided"}
+                </p>
+                <p className="font-cabin font-normal text-[20px] leading-6 text-[#1A1F16]">
+                    {values.city && values.postal
+                        ? `${values.city}, ${values.postal}`
+                        : "No city/state provided"}
+                </p>
+                <p className="font-cabin font-normal text-[20px] leading-6 text-[#1A1F16]">
+                    United States of America
+                </p>
             </div>
         </div>
+
+        {submitted &&
+            (errors.name || errors.address || errors.city || errors.postal) && (
+                <div className="text-red-500 text-sm px-2 mt-2">
+                    Please add a complete shipping address.
+                </div>
+            )}
     </div>
 );
 
@@ -184,21 +124,38 @@ const PaymentForm = ({ submitted, errors }) => {
 };
 
 const CheckoutForm = () => {
-    const [shipping, setShipping] = useState({
-        name: "",
-        address: "",
-        city: "",
-        postal: "",
-    });
-    const [errors, setErrors] = useState({});
-    const [submitted, setSubmitted] = useState(false);
     const dispatch = useDispatch();
     const items = useSelector((state) => state.cart.items);
     const paymentState = useSelector((state) => state.payment);
+    const addressState = useSelector((state) => state.address);
 
-    const handleShippingChange = (e) => {
-        setShipping({ ...shipping, [e.target.name]: e.target.value });
-    };
+    // Get the default or selected address
+    const effectiveAddressId =
+        addressState.defaultAddressId || addressState.selectedAddressId;
+    const savedAddress = addressState.addresses.find(
+        (addr) => addr.id === effectiveAddressId
+    );
+
+    const [shipping, setShipping] = useState({
+        name: savedAddress?.shippingName || "",
+        address: savedAddress?.streetName || "",
+        city: savedAddress?.city || "",
+        postal: savedAddress?.stateProvince || "",
+    });
+    const [errors, setErrors] = useState({});
+    const [submitted, setSubmitted] = useState(false);
+
+    // Update form when saved address changes
+    useEffect(() => {
+        if (savedAddress) {
+            setShipping({
+                name: savedAddress.shippingName,
+                address: savedAddress.streetName,
+                city: savedAddress.city,
+                postal: savedAddress.stateProvince,
+            });
+        }
+    }, [savedAddress]);
 
     const validate = () => {
         const newErrors = {};
@@ -234,7 +191,6 @@ const CheckoutForm = () => {
                         <div className="lg:col-span-2 flex flex-col gap-6">
                             <ShippingForm
                                 values={shipping}
-                                onChange={handleShippingChange}
                                 errors={errors}
                                 submitted={submitted}
                             />

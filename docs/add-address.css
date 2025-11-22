@@ -1,0 +1,968 @@
+/* Form */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 32px;
+gap: 16px;
+
+position: absolute;
+width: 676px;
+height: 834px;
+left: 382px;
+top: 95px;
+
+/* UI/White */
+background: #ffffff;
+border-radius: 15px;
+
+/* Name */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px;
+gap: 10px;
+
+width: 612px;
+height: 99px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+/* Input */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+
+width: 596px;
+height: 83px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+/* Label */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 8px;
+gap: 10px;
+
+width: 117px;
+height: 19px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Label */
+
+width: 101px;
+height: 19px;
+
+/* Body/Small/Regular/Condensed */
+font-family: "Cabin";
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: -0.02em;
+
+/* Font/Placeholder */
+color: rgba(26, 31, 22, 0.5);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Input-Field */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px 16px;
+gap: 8px;
+
+width: 596px;
+height: 56px;
+
+/* UI/White */
+background: #ffffff;
+box-shadow: 0px 4px 16px rgba(26, 31, 22, 0.15);
+border-radius: 13px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+/* Input-Area */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px;
+gap: 10px;
+
+width: 564px;
+height: 40px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+/* Placeholder */
+
+width: 548px;
+height: 24px;
+
+/* Body/Normal/Medium/Normal */
+font-family: "Cabin";
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+
+/* Font/Placeholder */
+color: rgba(26, 31, 22, 0.5);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+/* Name */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px;
+gap: 10px;
+
+width: 612px;
+height: 99px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+/* Input */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+
+width: 596px;
+height: 83px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+/* Label */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 8px;
+gap: 10px;
+
+width: 99px;
+height: 19px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Label */
+
+width: 83px;
+height: 19px;
+
+/* Body/Small/Regular/Condensed */
+font-family: "Cabin";
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: -0.02em;
+
+/* Font/Placeholder */
+color: rgba(26, 31, 22, 0.5);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Input-Field */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px 16px;
+gap: 8px;
+
+width: 596px;
+height: 56px;
+
+/* UI/White */
+background: #ffffff;
+box-shadow: 0px 4px 16px rgba(26, 31, 22, 0.15);
+border-radius: 13px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+/* Input-Area */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px;
+gap: 10px;
+
+width: 564px;
+height: 40px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+/* Placeholder */
+
+width: 548px;
+height: 24px;
+
+/* Body/Normal/Regular/Normal */
+font-family: "Cabin";
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+/* Font/Placeholder */
+color: rgba(26, 31, 22, 0.5);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+/* Name */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px;
+gap: 10px;
+
+width: 612px;
+height: 99px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+/* Input */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+
+width: 596px;
+height: 83px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+/* Label */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 8px;
+gap: 10px;
+
+width: 43px;
+height: 19px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Label */
+
+width: 27px;
+height: 19px;
+
+/* Body/Small/Regular/Condensed */
+font-family: "Cabin";
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: -0.02em;
+
+/* Font/Placeholder */
+color: rgba(26, 31, 22, 0.5);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Input-Field */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px 16px;
+gap: 8px;
+
+width: 596px;
+height: 56px;
+
+/* UI/White */
+background: #ffffff;
+box-shadow: 0px 4px 16px rgba(26, 31, 22, 0.15);
+border-radius: 13px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+/* Input-Area */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px;
+gap: 10px;
+
+width: 564px;
+height: 40px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+/* Placeholder */
+
+width: 548px;
+height: 24px;
+
+/* Body/Normal/Regular/Normal */
+font-family: "Cabin";
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+/* Font/Placeholder */
+color: rgba(26, 31, 22, 0.5);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+/* Name */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px;
+gap: 10px;
+
+width: 612px;
+height: 99px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+/* Input */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+
+width: 596px;
+height: 83px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+/* Label */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 8px;
+gap: 10px;
+
+width: 118px;
+height: 19px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Label */
+
+width: 102px;
+height: 19px;
+
+/* Body/Small/Regular/Condensed */
+font-family: "Cabin";
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: -0.02em;
+
+/* Font/Placeholder */
+color: rgba(26, 31, 22, 0.5);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Input-Field */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px 16px;
+gap: 8px;
+
+width: 596px;
+height: 56px;
+
+/* UI/White */
+background: #ffffff;
+box-shadow: 0px 4px 16px rgba(26, 31, 22, 0.15);
+border-radius: 13px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+/* Input-Area */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px;
+gap: 10px;
+
+width: 564px;
+height: 40px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+/* Placeholder */
+
+width: 548px;
+height: 24px;
+
+/* Body/Normal/Regular/Normal */
+font-family: "Cabin";
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+/* Font/Placeholder */
+color: rgba(26, 31, 22, 0.5);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+/* Name */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px;
+gap: 10px;
+
+width: 612px;
+height: 99px;
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+align-self: stretch;
+flex-grow: 0;
+
+/* Input */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+
+width: 596px;
+height: 83px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+/* Label */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 8px;
+gap: 10px;
+
+width: 69px;
+height: 19px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Label */
+
+width: 53px;
+height: 19px;
+
+/* Body/Small/Regular/Condensed */
+font-family: "Cabin";
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: -0.02em;
+
+/* Font/Placeholder */
+color: rgba(26, 31, 22, 0.5);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Input-Field */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px 16px;
+gap: 8px;
+
+width: 596px;
+height: 56px;
+
+/* UI/White */
+background: #ffffff;
+box-shadow: 0px 4px 16px rgba(26, 31, 22, 0.15);
+border-radius: 13px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+/* Input-Area */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px;
+gap: 10px;
+
+width: 564px;
+height: 40px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+/* Placeholder */
+
+width: 548px;
+height: 24px;
+
+/* Body/Normal/Regular/Normal */
+font-family: "Cabin";
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+/* Font/Placeholder */
+color: rgba(26, 31, 22, 0.5);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+/* Save */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 16px 8px;
+gap: 8px;
+
+width: 612px;
+height: 56px;
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+align-self: stretch;
+flex-grow: 0;
+
+/* Checkbox */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 297px;
+height: 24px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Checkbox-Input */
+
+width: 16px;
+height: 16px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Checkbox-Input */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* UI/Tertiary */
+border: 1px solid #60695c;
+border-radius: 2px;
+
+/* Inner */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 12.5%;
+bottom: 12.5%;
+
+/* Font/Accent */
+background: #12805d;
+border-radius: 1px;
+
+/* Label */
+
+width: 273px;
+height: 24px;
+
+/* Body/Normal/Regular/Normal */
+font-family: "Cabin";
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+/* Font/Placeholder */
+color: rgba(26, 31, 22, 0.5);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+/* CTA */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 16px;
+gap: 8px;
+
+width: 612px;
+height: 72px;
+
+/* Inside auto layout */
+flex: none;
+order: 6;
+align-self: stretch;
+flex-grow: 0;
+
+/* Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 24px;
+gap: 8px;
+
+width: 580px;
+height: 40px;
+
+/* UI/Dark */
+background: #1a1f16;
+border-radius: 10px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+/* Button */
+
+width: 108px;
+height: 24px;
+
+/* Body/Normal/Medium/Normal */
+font-family: "Cabin";
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+
+/* Font/White */
+color: #ffffff;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Infromation */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 612px;
+height: 35px;
+
+/* Inside auto layout */
+flex: none;
+order: 7;
+align-self: stretch;
+flex-grow: 0;
+
+/* Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 24px;
+gap: 8px;
+
+margin: 0 auto;
+width: 79px;
+height: 35px;
+
+border-radius: 11px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Button */
+
+width: 31px;
+height: 19px;
+
+font-family: "Cabin";
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: -0.02em;
+text-decoration-line: underline;
+
+/* Font/Placeholder */
+color: rgba(26, 31, 22, 0.5);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Info */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+margin: 0 auto;
+width: 155px;
+height: 24px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+/* Icon */
+
+width: 24px;
+height: 24px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Vector */
+
+position: absolute;
+left: 15.62%;
+right: 15.62%;
+top: 3.12%;
+bottom: 3.12%;
+
+/* Font/Success */
+background: #02d693;
+
+/* Secure Connection */
+
+width: 123px;
+height: 19px;
+
+/* Body/Small/Regular/Condensed */
+font-family: "Cabin";
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: -0.02em;
+
+/* Font/Success */
+color: #02d693;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;

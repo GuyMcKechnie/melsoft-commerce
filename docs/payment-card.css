@@ -8,7 +8,7 @@ padding: 16px;
 gap: 8px;
 
 width: 871px;
-height: 230px;
+height: 214px;
 
 /* UI/White */
 background: #ffffff;
@@ -16,7 +16,7 @@ border-radius: 13px;
 
 /* Inside auto layout */
 flex: none;
-order: 0;
+order: 1;
 flex-grow: 0;
 
 /* Header */
@@ -27,7 +27,7 @@ flex-direction: row;
 align-items: flex-start;
 padding: 8px;
 
-width: 413px;
+width: 385px;
 height: 54px;
 
 /* Inside auto layout */
@@ -35,9 +35,9 @@ flex: none;
 order: 0;
 flex-grow: 0;
 
-/* Shipping Address */
+/* Payment Method */
 
-width: 397px;
+width: 369px;
 height: 38px;
 
 /* Subtitle/Small/Regular/Expanded */
@@ -68,7 +68,7 @@ align-items: flex-start;
 padding: 0px;
 
 width: 839px;
-height: 136px;
+height: 120px;
 
 /* Inside auto layout */
 flex: none;
@@ -83,40 +83,58 @@ display: flex;
 flex-direction: column;
 align-items: flex-start;
 padding: 8px;
-gap: 8px;
+gap: 16px;
 
 margin: 0 auto;
-width: 227px;
-height: 136px;
+width: 384px;
+height: 120px;
 
 /* Inside auto layout */
 flex: none;
 order: 0;
 flex-grow: 0;
 
-/* John Maker */
+/* Card */
 
-width: 98px;
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 250px;
 height: 24px;
 
-/* Body/Normal/Regular/Normal */
-font-family: "Cabin";
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 24px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
 
-/* Font/Dark */
-color: #1a1f16;
+/* Icon */
+
+width: 24px;
+height: 24px;
 
 /* Inside auto layout */
 flex: none;
 order: 0;
 flex-grow: 0;
 
-/* 123 Plae Grond Stret */
+/* Vector */
 
-width: 172px;
+position: absolute;
+left: 6.25%;
+right: 6.25%;
+top: 15.62%;
+bottom: 15.62%;
+
+/* Font/Dark */
+background: #1a1f16;
+
+/* Mastercard ending in 1252 */
+
+width: 218px;
 height: 24px;
 
 /* Body/Normal/Regular/Normal */
@@ -134,9 +152,55 @@ flex: none;
 order: 1;
 flex-grow: 0;
 
-/* Vermont, California */
+/* Gift-Card */
 
-width: 163px;
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+width: 236px;
+height: 24px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+/* Icon */
+
+width: 24px;
+height: 24px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Vector */
+
+position: absolute;
+left: 31.25%;
+right: 31.25%;
+top: 12.5%;
+bottom: 71.88%;
+
+/* Vector */
+
+position: absolute;
+left: 9.38%;
+right: 9.38%;
+top: 6.31%;
+bottom: 6.25%;
+
+/* Font/Dark */
+background: #1a1f16;
+
+/* $ 53.21 gift card balance */
+
+width: 202px;
 height: 24px;
 
 /* Body/Normal/Regular/Normal */
@@ -148,15 +212,83 @@ line-height: 24px;
 
 /* Font/Dark */
 color: #1a1f16;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+/* Billing Address */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+
+width: 368px;
+height: 24px;
 
 /* Inside auto layout */
 flex: none;
 order: 2;
 flex-grow: 0;
 
-/* United States of America */
+/* Checkbox */
 
-width: 211px;
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 368px;
+height: 24px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Checkbox-Input */
+
+width: 16px;
+height: 16px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Checkbox-Input */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* UI/Tertiary */
+border: 1px solid #60695c;
+border-radius: 2px;
+
+/* Inner */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 12.5%;
+bottom: 12.5%;
+
+/* Font/Accent */
+background: #12805d;
+border-radius: 1px;
+
+/* Label */
+
+width: 344px;
 height: 24px;
 
 /* Body/Normal/Regular/Normal */
@@ -171,7 +303,45 @@ color: #1a1f16;
 
 /* Inside auto layout */
 flex: none;
+order: 1;
+flex-grow: 0;
+
+/* Change Billing Address */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 10px;
+
+display: none;
+width: 192px;
+height: 24px;
+
+/* Inside auto layout */
+flex: none;
 order: 3;
+flex-grow: 0;
+
+/* Change Billing Address */
+
+width: 192px;
+height: 24px;
+
+font-family: "Cabin";
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+text-decoration-line: underline;
+
+/* Font/Placeholder */
+color: rgba(26, 31, 22, 0.5);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
 flex-grow: 0;
 
 /* Actions */
