@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { clearCart } from "../redux/cartSlice";
 import OrderSummary from "./OrderSummary";
 import { Link } from "react-router-dom";
-import { CreditCard, Gift } from "lucide-react";
+import { ChevronLeft, CreditCard, Gift } from "lucide-react";
 
 const ShippingForm = ({ values, errors, submitted }) => (
     <div className="flex flex-col items-start p-4 gap-2 bg-white rounded-[13px]">
@@ -246,6 +246,7 @@ const CheckoutForm = () => {
                                 onClick={() => window.history.back()}
                                 className="self-start inline-flex items-center justify-center px-4 py-2 border border-[#1A1F16] rounded-[11px] text-[#1A1F16]"
                             >
+                                <ChevronLeft className="mr-2" size={16} />
                                 Back
                             </button>
                         </div>

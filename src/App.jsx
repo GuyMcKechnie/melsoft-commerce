@@ -16,7 +16,13 @@ function App() {
             <Sidebar />
             <Layout>
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route
+                        path="/"
+                        element={
+                            <div>Please navigate to the product page.</div>
+                        }
+                    />
+                    <Route path="/products" element={<Home />} />
                     <Route path="/product/:id" element={<ProductView />} />
                     <Route path="/checkout" element={<CheckoutForm />} />
                     <Route path="/order-success" element={<OrderSuccess />} />
