@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
 import { Link } from "react-router-dom";
+import { CirclePlus } from "lucide-react";
 
 const ProductItem = ({ product }) => {
     const dispatch = useDispatch();
@@ -44,11 +45,7 @@ const ProductItem = ({ product }) => {
                     className="bg-[#1a1f16] hover:bg-black text-white w-[34px] h-[34px] rounded-[9px] flex items-center justify-center transition-colors"
                     aria-label={`Add ${name} to cart`}
                 >
-                    <img
-                        src="/src/assets/add-to-cart.png"
-                        alt="Add to cart"
-                        className="w-5 h-5"
-                    />
+                    <CirclePlus className="w-5 h-5" />
                 </button>
             </div>
         </Link>

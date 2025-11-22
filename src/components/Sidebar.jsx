@@ -1,5 +1,6 @@
 import { LogOut, Menu, ShoppingBag, Store } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import logo from "../assets/logo.png"; // Ensure Vite processes the image for production
 
 export default function Sidebar() {
     const location = useLocation();
@@ -24,9 +25,10 @@ export default function Sidebar() {
         <aside className="fixed top-0 left-0 h-screen w-20 bg-white flex flex-col justify-between items-center py-2 px-4 gap-2 shadow-lg z-20 rounded-lg">
             <div className="flex flex-col items-center gap-4 mt-2">
                 <img
-                    src="/src/assets/logo.png"
+                    src={logo}
                     alt="Logo"
                     className="w-full h-full object-contain"
+                    loading="lazy"
                 />
             </div>
             <nav className="flex flex-col items-center gap-8 mt-8 flex-1">
