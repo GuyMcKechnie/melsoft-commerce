@@ -1,70 +1,171 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Melsoft Commerce — Frontend E‑Commerce Capstone
 
-## Available Scripts
+Responsive, client‑side e‑commerce storefront built with React, Tailwind CSS, React Router, and Redux Toolkit. Implements browsing, product detail, cart management, checkout (shipping + payment), and order confirmation — all from a local product catalog with persisted state.
 
-In the project directory, you can run:
+</div>
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Project Overview
+2. Tech Stack
+3. Features & Requirements Coverage
+4. Project Structure
+5. State Management
+6. Development Scripts
+7. Running & Building
+8. Testing
+9. Architecture & Design Decisions
+10. Accessibility & UX Notes
+11. Future Enhancements
+12. Contributing Workflow
+13. License / Usage
+14. AI Attribution
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 1. Project Overview
 
-### `npm test`
+This project recreates a provided Figma design (Melsoft Academy E‑Commerce Store) with focus on: component reuse, predictable global state, form validation, derived pricing logic, and UI fidelity. All data (products, cart, addresses, payment methods) resides in the browser; no backend services.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 2. Tech Stack
 
-### `npm run build`
+-   React (functional components + hooks)
+-   Vite (fast dev server & build tooling)
+-   Tailwind CSS (utility‑first styling)
+-   React Router DOM (routing/navigation)
+-   Redux Toolkit (global state + slices)
+-   Lucide React (icons)
+-   Testing: Vitest + @testing-library/react
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 3. Features & Requirements Coverage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Requirement                   | Status      | Notes                                                                 |
+| ----------------------------- | ----------- | --------------------------------------------------------------------- |
+| Home page product grid        | Implemented | `/` route shows searchable grid                                       |
+| Sidebar toggle                | Implemented | `uiSlice` controls `sidebarOpen` state                                |
+| Search (local filtering)      | Implemented | Case‑insensitive filter across multiple product fields                |
+| Product detail page           | Implemented | `/product/:id` loads product by id; shows images, description, rating |
+| Mini cart thumbnails          | Implemented | Displayed on Home & Product detail side panel                         |
+| Full cart page                | Implemented | Quantity increment/decrement + remove item                            |
+| Derived totals                | Implemented | Memoized selectors + order summary component                          |
+| Checkout (shipping + payment) | Implemented | Address & payment selection with validation                           |
+| Order success page            | Implemented | `/order-success` static confirmation                                  |
+| Cart persistence              | Implemented | localStorage subscribe in `store.js`                                  |
+| Product catalog local JS      | Implemented | `src/data/products.js` numeric prices                                 |
+| Redux selectors               | Implemented | `selectCartItems`, `selectCartTotalQty`, `selectCartTotalPrice`       |
+| UI atoms (buttons, etc.)      | Partial     | Reusable atoms can be extracted next                                  |
+| Tests (basic)                 | Partial     | Some component tests exist; need refresh after recent changes         |
+| Accessibility                 | Partial     | Basic labels; further improvements outlined below                     |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 4. Project Structure
 
-### `npm run eject`
+```
+src/
+	App.jsx            # Routes and layout integration
+	main.jsx           # Root render & Redux provider
+	assets/            # Static images (processed by Vite)
+	components/        # Page + UI components (Home, ProductView, Checkout, etc.)
+	data/products.js   # Local product catalog & helpers
+	redux/             # Slices (cart, payment, address, ui) + store + selectors
+	index.css          # Tailwind imports & global styles
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 5. State Management
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Redux Toolkit slices:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+-   `cartSlice`: `addToCart`, `removeFromCart`, `updateQuantity`, `clearCart`
+-   `addressSlice`: add/select/setDefault/remove addresses
+-   `paymentSlice`: add/select/setDefault/remove payment methods (stored minimally)
+-   `uiSlice`: UI toggles (sidebar)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Selectors (`redux/selectors.js`) provide memoized derived data: total quantity & total price. localStorage persistence occurs via `store.subscribe()` for cart/payment/address slices.
 
-## Learn More
+## 6. Development Scripts
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| Script            | Purpose                                   |
+| ----------------- | ----------------------------------------- |
+| `npm run dev`     | Start Vite dev server (default port 5173) |
+| `npm run build`   | Production build into `build/`            |
+| `npm run preview` | Preview production build locally          |
+| `npm test`        | Run Vitest test suite                     |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 7. Running & Building
 
-### Code Splitting
+```bash
+npm install
+npm run dev      # development
+npm run build    # optimize & output to build/
+npm run preview  # serve build locally
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 8. Testing
 
-### Analyzing the Bundle Size
+Framework: Vitest + @testing-library/react.
+Existing tests cover: order summary, order success, checkout (legacy expectations). After recent UI adjustments (routing, search, sidebar toggle) tests should be updated to reflect current headings and aria labels. Add selectors tests for correctness of derived totals.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Recommended new tests:
 
-### Making a Progressive Web App
+-   Cart quantity update & removal
+-   Search filtering (term matches & empty state)
+-   Sidebar toggle state change
+-   Checkout validation success/failure paths
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Run tests:
 
-### Advanced Configuration
+```bash
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 9. Architecture & Design Decisions
 
-### Deployment
+-   Vite chosen for faster feedback loop vs older CRA template originally scaffolded.
+-   Numeric product prices ensure reliable arithmetic without `parseFloat` scattering.
+-   Derived cart values moved to selectors to minimize re-computation and keep components lean.
+-   Sidebar duplication removed; single conditional render improves layout clarity.
+-   Search implemented as controlled input with `useMemo` for predictable performance.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 10. Accessibility & UX Notes
 
-### `npm run build` fails to minify
+Current steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-   Semantic buttons & `aria-label` on actionable icons (e.g., Add to Bag, search input).
+-   Focus styles rely on Tailwind defaults; can be enhanced with explicit `focus-visible` utilities.
+
+Suggested improvements:
+
+-   Add `role="navigation"` to sidebar container.
+-   Announce cart item count changes with an `aria-live="polite"` region.
+-   Provide keyboard shortcuts (e.g., press `/` to focus search).
+-   Ensure color contrast meets WCAG (audit dark gray on light backgrounds).
+
+## 11. Future Enhancements
+
+-   Category filtering & sorting (price, rating).
+-   Toast notifications instead of `alert()` for add-to-cart feedback.
+-   Extract UI atoms: `Button`, `Input`, `Badge`, `Card` with Tailwind `@apply` classes.
+-   Dark mode / theme tokens in `tailwind.config.js`.
+-   Persist UI preferences (sidebar open state) to localStorage.
+-   Add integration mock for payment (e.g., Stripe test keys) if scope expands.
+
+## 12. Contributing Workflow
+
+1. Create feature branch: `feature/<short-description>`.
+2. Implement changes with focused commits.
+3. Run `npm test` & manually verify UI.
+4. Open PR referencing requirement or issue.
+5. Request peer review; address comments before merge.
+
+Coding Guidelines:
+
+-   Keep components small & focused.
+-   Avoid inline style duplication (leverage Tailwind utilities or custom classes).
+-   Prefer selectors & `useMemo` for derived data.
+
+## 13. License / Usage
+
+Internal educational capstone project. If open sourcing, add a license (MIT recommended). Media assets should be verified for redistribution rights.
+
+## 14. AI Attribution
+
+This README file was generated with aid from an AI grammar tool.
