@@ -7,6 +7,7 @@ import OrderSuccess from "./components/OrderSuccess";
 import ViewCart from "./components/ViewCart";
 import Home from "./components/Home";
 import ProductView from "./components/ProductView";
+import AddPayment from "./components/AddPayment";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                     <Route path="/checkout" element={<CheckoutForm />} />
                     <Route path="/order-success" element={<OrderSuccess />} />
                     <Route path="/cart" element={<ViewCart />} />
+                    <Route path="/add-payment" element={<AddPayment />} />
                 </Routes>
             </Layout>
         </Router>
